@@ -11,10 +11,11 @@ app.get("/api/hello", (req, res) => {
   res.send({ express: "Hello From Express" });
 });
 
-//app.post("/api/world", (req, res) => {
-//  console.log(req.body);
-//  res.send("You sent:" + req.body.post);
-//});
+app.post("/api/world", (req, res) => {
+  console.log("World called");
+  console.log(req.body);
+  res.send("You sent:" + req.body.post);
+});
 
 app.post("/api/func", (req, res) => {
   console.log(req.body);
